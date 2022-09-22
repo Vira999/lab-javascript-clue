@@ -118,10 +118,12 @@ function pickMystery() {
 
 function revealMystery() {
         
-      //  return pickMystery("${firstName lastName.suspect} //
-        //"killed Mr. Boddy using the" ${weapon} "in the" ${room}"!");//
+      
         
-        return "<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <PLACE>!"
-        return"<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <PLACE>!"
-}
+        return "<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <PLACE>!";
+        return (`${pickMystery().suspect.firstName} ${pickMystery().suspect.lastName}  "killed Mr. Boddy using the" 
+        ${pickMystery().weapon.name}  ${pickMystery().weapon.weight}  "in the"  ${pickMystery().room.name} "!"`);
+       
+}console.log (`${pickMystery().suspect.firstName} ${pickMystery().suspect.lastName} "killed Mr. Boddy using the" 
+ ${pickMystery().weapon.name}  ${pickMystery().weapon.weight} "in the"  ${pickMystery().room.name} "!"`);
 
